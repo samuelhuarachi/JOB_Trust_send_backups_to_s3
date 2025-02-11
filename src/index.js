@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '/home/ubuntu/JOB_Trust_send_backups_to_s3/.env' });
 
 const fs = require("fs");
 const path = require("path")
