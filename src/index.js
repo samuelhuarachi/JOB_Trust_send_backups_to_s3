@@ -44,7 +44,7 @@ const s3 = new AWS.S3();
 
 
         const file_name = moment(new Date()).get("D") % 2;
-        const filePath = path.join(__dirname, '../../', file_to_upload);
+        const filePath = path.join("/home/ubuntu/", file_to_upload);
 
         const params = {
             Bucket,
