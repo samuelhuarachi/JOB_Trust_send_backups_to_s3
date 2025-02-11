@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(path.join("/home/ubuntu/JOB_Trust_send_backups_to_s3/", ".env"));
 
 const fs = require("fs");
 const path = require("path")
@@ -47,7 +47,7 @@ const s3 = new AWS.S3();
         const filePath = path.join("/home/ubuntu/", file_to_upload);
 
         const params = {
-            Bucket: trustintercambio,
+            Bucket,
             Key: 'backups/' + file_name + '_' + file_to_upload,
             Body: fs.createReadStream(filePath) // Use stream here
         };
