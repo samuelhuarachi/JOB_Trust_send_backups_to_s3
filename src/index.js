@@ -47,7 +47,7 @@ const s3 = new AWS.S3();
         const filePath = path.join("/home/ubuntu/", file_to_upload);
 
         const params = {
-            Bucket,
+            Bucket: trustintercambio,
             Key: 'backups/' + file_name + '_' + file_to_upload,
             Body: fs.createReadStream(filePath) // Use stream here
         };
