@@ -54,16 +54,16 @@ const s3 = new AWS.S3();
 
         s3.upload(params)
                 .on('httpUploadProgress', (progress) => {
-                    //console.log(`Uploaded ${progress.loaded} of ${progress.total} bytes`);
+                    console.log(`Uploaded ${progress.loaded} of ${progress.total} bytes`);
                 })
                 .promise()
                 .then((data) => {
-                    //console.log('Upload Success', data.Location);
+                    console.log('Upload Success', data.Location);
                 })
                 .catch((err) => {
-                    //console.error('Upload Failed', err);
+                    console.error('Upload Failed', err);
                 });
     } catch (e) {
-        //console.log("Error uploading data: ", e);
+        console.log("Error uploading data: ", e);
     }
 })()
