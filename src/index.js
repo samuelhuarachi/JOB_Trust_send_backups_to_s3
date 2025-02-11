@@ -1,7 +1,7 @@
+require('dotenv').config();
+
 const fs = require("fs");
 const path = require("path")
-require('dotenv').config(path.join("/home/ubuntu/JOB_Trust_send_backups_to_s3/", ".env"));
-
 // const { Upload } = require("@aws-sdk/lib-storage");
 // const { S3Client, S3 } = require("@aws-sdk/client-s3");
 
